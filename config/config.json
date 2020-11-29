@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "dds",
+    "password": "123",
+    "database": "movie_list_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "dds",
+    "password": "123",
+    "database": "movie_list_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "dds",
+    "password": "123",
+    "database": "movie_list_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

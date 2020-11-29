@@ -1,0 +1,25 @@
+version: "3"
+services:
+  app:
+    image:  dashadudnik/test_movie_back
+    env_file: ./.env
+    depends_on:
+      - postgres
+
+  nginx:
+    image:  dashadudnik/test_movie_front
+    ports:
+      - 8080:8080
+    depends_on:
+      - app
+
+  postgres:
+    image: postgres:10.10-alpine
+    environment:
+      POSTGRES_USER: movie_test_admin
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: movie_test
+    volumes:
+      - /var/lib/postgresql/dockerized:/var/lib/postgresql
+    ports:
+      - "3000:9001"
