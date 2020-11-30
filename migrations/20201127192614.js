@@ -28,7 +28,7 @@ module.exports = {
     await queryInterface.addColumn(
       'MovieListItems',
       'overview', {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       defaultValue: false,
     },
       { transaction: t },
